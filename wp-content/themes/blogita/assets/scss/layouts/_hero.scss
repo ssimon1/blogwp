@@ -1,0 +1,153 @@
+/*--------------------------------------------------------------
+# Hero CSS
+--------------------------------------------------------------*/
+
+
+.hero {
+  &__area {
+    text-align: center;
+
+    .blog__author::after {
+      background-color: $secondary;
+    }
+  }
+
+  &__slider {
+    height: 90vh;
+
+    img {
+      width: 100%;
+    }
+
+    &-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &-title {
+      font-size: 48px;
+      color: $white;
+      padding-bottom: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+
+      @media #{$md} {
+        font-size: 30px;
+      }
+      @media #{$sm} {
+        font-size: 24px;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+
+    &-meta {
+      li {
+        display: inline-block;
+        a {
+          display: block;
+          color: $primary;
+          font-weight: 500;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .date {
+      color: $white;
+      text-transform: capitalize;
+    }
+
+    .post-categories {
+      li {
+        display: inline-block;
+        padding: 0 10px;
+        a {
+          display: block;
+          color: $primary;
+          padding: 5px;
+          font-weight: 500;
+          text-transform: capitalize;
+
+          &:focus {
+            outline: 1px solid $white;
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 40px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: $primary;
+    }
+
+  }
+}
+
+
+
+// Category Slider
+.category__slider {
+  width: 280px;
+  height: 320px;
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: 700;
+    color: $white;
+
+    a {
+      color: $white;
+      font-size: 24px;
+      transition: all 0.3s;
+      text-transform: capitalize;
+
+      &:hover,
+      &:focus {
+        color: $dark;
+      }
+      &:focus {
+        color: $dark;
+        outline: 1px solid $dark;
+      }
+    }
+  }
+
+}
+
+// Slider Pagination
+.swiper-button-next,
+.swiper-button-prev {
+  color: $primary;
+  transition: all 0.3s;
+
+  @media #{$sm} {
+    display: none;
+  }
+
+  &:hover {
+    color: $secondary;
+  }
+  &:focus {
+    color: $secondary;
+  }
+}
